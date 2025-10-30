@@ -12,6 +12,7 @@ type StudyPlanHandler struct {
 }
 
 func NewStudyPlanHandler(uc studyplan.Usecase) studyplan.Handler {
+
 	return &StudyPlanHandler{
 		studyPlanUC: uc,
 	}
