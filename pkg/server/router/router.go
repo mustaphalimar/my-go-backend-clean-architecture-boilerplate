@@ -11,6 +11,7 @@ import (
 func NewRouter(srv *server.Server, handlers *handlers.Handlers, usecases *usecases.Usecases) *echo.Echo {
 	router := echo.New()
 
+	registerSystemRoutes(router, handlers)
 	// api versionning
 	v1Router := router.Group("/api/v1")
 
