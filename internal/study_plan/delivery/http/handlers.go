@@ -22,7 +22,7 @@ func (h *StudyPlanHandler) Get() echo.HandlerFunc {
 		return c.JSON(http.StatusOK, struct {
 			Message string `json:"message"`
 		}{
-			Message: "Hello",
+			Message: "Hello from study plan handler",
 		})
 	}
 }
@@ -32,7 +32,7 @@ func (h *StudyPlanHandler) GetAll() echo.HandlerFunc {
 		return c.JSON(http.StatusOK, struct {
 			Message string `json:"message"`
 		}{
-			Message: "Hello",
+			Message: "Hello from study plan handler",
 		})
 	}
 }

@@ -33,7 +33,7 @@ func main() {
 
 	// Initialize repositories, services, and handlers
 	repos := repositories.NewRepositories(srv)
-	usecases := usecases.NewUsecases(repos)
+	usecases := usecases.NewUsecases(srv, repos)
 	handlers := handlers.NewHandlers(srv, usecases)
 
 	r := router.NewRouter(srv, handlers, usecases)

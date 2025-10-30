@@ -3,13 +3,15 @@ package usecase
 import (
 	"github.com/mustaphalimar/prepilotapp-backend/internal/models"
 	studyplan "github.com/mustaphalimar/prepilotapp-backend/internal/study_plan"
+	"github.com/mustaphalimar/prepilotapp-backend/pkg/server"
 )
 
 type StudyPlanUC struct {
-	repo studyplan.Repository
+	server *server.Server
+	repo   studyplan.Repository
 }
 
-func NewStudyPlanUC(repo studyplan.Repository) studyplan.Usecase {
+func NewStudyPlanUC(srv *server.Server, repo studyplan.Repository) studyplan.Usecase {
 	return &StudyPlanUC{
 		repo: repo,
 	}

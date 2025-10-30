@@ -3,13 +3,15 @@ package usecase
 import (
 	"github.com/mustaphalimar/prepilotapp-backend/internal/exam"
 	"github.com/mustaphalimar/prepilotapp-backend/internal/models"
+	"github.com/mustaphalimar/prepilotapp-backend/pkg/server"
 )
 
 type ExamUC struct {
-	repo exam.Repository
+	server *server.Server
+	repo   exam.Repository
 }
 
-func NewExamUC(repo exam.Repository) exam.Usecase {
+func NewExamUC(srv *server.Server, repo exam.Repository) exam.Usecase {
 	return &ExamUC{
 		repo: repo,
 	}
