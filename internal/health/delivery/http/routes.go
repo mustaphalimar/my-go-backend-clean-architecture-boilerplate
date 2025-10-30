@@ -8,5 +8,4 @@ import (
 func MapHealthRoutes(r *echo.Echo, h health.Handler) {
 	r.GET("/status", h.CheckHealth)
 	r.GET("/debug/cors", h.CheckCORS)
-
 }
